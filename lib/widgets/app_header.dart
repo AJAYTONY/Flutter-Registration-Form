@@ -9,9 +9,9 @@ class AppHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
+        /*const SizedBox(
           height: 25,
-        ),
+        ),*/
         Text(
           text,
           style: Theme.of(context).textTheme.headline3,

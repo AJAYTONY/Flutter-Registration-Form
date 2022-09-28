@@ -62,7 +62,7 @@ class _RegisterTextFieldState extends State<RegisterTextField>
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      autofocus: true,
+      //autofocus: true,
       maxLines: widget.maxLines,
       enabled: widget.enabled,
       validator: widget.validator,
@@ -70,17 +70,20 @@ class _RegisterTextFieldState extends State<RegisterTextField>
       onChanged: widget.onChanged,
       keyboardType: widget.textInputType,
       textInputAction: TextInputAction.next,
+      //style: TextStyle(color: Colors.grey[400]!),
       decoration: InputDecoration(
         labelText: widget.labelText,
         hintText: widget.hintText,
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         fillColor: Colors.white,
+        filled: true,
         hintStyle: TextStyle(color: Colors.grey[400]!),
         labelStyle: TextStyle(color: Colors.grey[400]!),
         errorStyle: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 10,
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
          // borderRadius: BorderRadius.circular(10),
           borderSide:
               BorderSide(color: Colors.black, width: 2),
@@ -89,11 +92,11 @@ class _RegisterTextFieldState extends State<RegisterTextField>
           //borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: Colors.black87),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           //borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: Colors.black87),
         ),
-        disabledBorder: OutlineInputBorder(
+        disabledBorder: const OutlineInputBorder(
          // borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: Colors.black87),
         ),

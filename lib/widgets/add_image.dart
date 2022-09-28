@@ -18,7 +18,7 @@ class AddImageForm extends StatelessWidget {
     Widget _placeholder = Stack(children: [
       Container(
         margin: EdgeInsets.only(top: 48),
-       // height: 300,
+        // height: 300,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16.0),
@@ -31,6 +31,9 @@ class AddImageForm extends StatelessWidget {
             radius: 40.0,
             backgroundColor: Colors.blue,
             child: CircleAvatar(
+              radius: 38.0,
+              backgroundImage:
+                  AssetImage('default.user.png'),
               child: Align(
                 alignment: Alignment.bottomRight,
                 child: CircleAvatar(
@@ -43,9 +46,6 @@ class AddImageForm extends StatelessWidget {
                   ),
                 ),
               ),
-              radius: 38.0,
-              backgroundImage:
-                  AssetImage('default.user.png'),
             ),
           ),
         ),

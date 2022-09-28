@@ -58,7 +58,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   IconButton(
@@ -68,10 +68,8 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
                             MaterialPageRoute(
                                 builder: ((context) => const YourInfo())));
                       },
-                      icon: Icon(Icons.arrow_back)),
-                  SizedBox(
-                    width: 40,
-                  ),
+                      icon: const Icon(Icons.arrow_back)),
+
                   const Align(
                       alignment: Alignment.center,
                       child: AppHeader(text: 'Your Address')),
@@ -105,7 +103,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
           children: <Widget>[
             SizedBox(height: 40,),
             RegisterTextField(
-              labelText: "Address",
+              labelText: "",
               hintText: "Address",
               leadingIcon: Icons.house,
               controller: addressController,
@@ -115,7 +113,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             ),
             SizedBox(height: 20,),
             RegisterTextField(
-              labelText: "Landmark",
+              labelText: "",
               hintText: "Landmark",
               leadingIcon: Icons.house,
               controller: landmarkController,
@@ -125,7 +123,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             ),
             SizedBox(height: 20,),
             RegisterTextField(
-              labelText: "City",
+              labelText: "",
               hintText: "City",
               leadingIcon: Icons.house,
               controller: cityController,
@@ -138,7 +136,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             SizedBox(height: 20,),
 
             RegisterTextField(
-              labelText: "Pin Code",
+              labelText: " ",
               hintText: "Pin Code",
               leadingIcon: Icons.house,
               controller: zipcodeController,
@@ -248,9 +246,9 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
       if(registerNotifier.states == null){
         Utility.showErrorSnackBar(context, message: "Please Select State");
       } else{
-        Utility.showSuccessSnackBar(context, message: "Good");
-        // Navigator.pushReplacement(
-        //     context, MaterialPageRoute(builder: ((context) => const HomePage())));
+        Utility.showSuccessSnackBar(context, message: "Successfully Submitted");
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: ((context) => const HomePage())));
       }
 
     } else {

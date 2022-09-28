@@ -57,24 +57,24 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
                   IconButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                                builder: ((context) =>
-                                    const RegisterScreen())));
-                      },
-                      icon: Icon(Icons.arrow_back)),
-                  SizedBox(
-                    width: 60,
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: ((context) => const RegisterScreen())));
+                    },
+                    icon: const Icon(Icons.arrow_back),
                   ),
-                  const Align(
-                      alignment: Alignment.center,
-                      child: AppHeader(text: 'Your Info')),
-                  Spacer(),
+
+                  const Expanded(
+                    child: Align(
+                        alignment: Alignment.center,
+                        child: AppHeader(text: 'Your Info')),
+                  ),
                 ],
               ),
               Padding(
@@ -102,7 +102,7 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           const CategoryHeader(text: 'Education Info'),
@@ -172,12 +172,12 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
                         MaterialPageRoute(
                             builder: ((context) => const RegisterScreen())));
                   },
-                  child: Text("Previous",
+                  child: const Text("Previous",
                       style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                          const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                   style: ButtonStyle(
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(15)),
+                          const EdgeInsets.all(15)),
                       foregroundColor: MaterialStateProperty.all<Color>(
                           Colors.blue.shade900),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -191,12 +191,12 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
                 flex: 1,
                 fit: FlexFit.tight,
                 child: ElevatedButton(
-                    child: Text("Next",
+                    child: const Text("Next",
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.bold)),
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all<EdgeInsets>(
-                          EdgeInsets.all(15)),
+                          const EdgeInsets.all(15)),
                       foregroundColor:
                           MaterialStateProperty.all<Color>(Colors.white),
                       backgroundColor: MaterialStateProperty.all<Color>(
@@ -238,7 +238,8 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
   TextFormField yearOfPassingWidget(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.number,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         labelText: '',
         hintText: 'Enter year of passing',
         // icon: const Padding(
@@ -249,19 +250,19 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
           fontWeight: FontWeight.bold,
           fontSize: 10,
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           // borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: Colors.black, width: 2),
         ),
         border: OutlineInputBorder(
           //borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Colors.black87),
+          borderSide: BorderSide(color: Colors.black87),
         ),
         enabledBorder: OutlineInputBorder(
           //borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.black87),
+          borderSide: const BorderSide(color: Colors.black87),
         ),
-        disabledBorder: OutlineInputBorder(
+        disabledBorder: const OutlineInputBorder(
           // borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: Colors.black87),
         ),
@@ -284,7 +285,8 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
   TextFormField gradeWidget(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.text,
-      decoration: InputDecoration(
+      decoration: const InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         labelText: '',
         hintText: 'Enter your Grade or Percentage',
         // icon: const Padding(
@@ -301,15 +303,15 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
         ),
         border: OutlineInputBorder(
           //borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.black87),
+          borderSide:  BorderSide(color: Colors.black87),
         ),
-        enabledBorder: OutlineInputBorder(
+        enabledBorder:  OutlineInputBorder(
           //borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: Colors.black87),
         ),
-        disabledBorder: OutlineInputBorder(
+        disabledBorder:  OutlineInputBorder(
           // borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.black87),
+          borderSide:  BorderSide(color: Colors.black87),
         ),
         // suffixIcon: Icon(
         //   Icons.arrow_drop_down_outlined,
@@ -331,6 +333,7 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
     return TextFormField(
       keyboardType: TextInputType.number,
       decoration: const InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         labelText: '',
         hintText: 'Enter the years of experience',
         // icon: const Padding(
@@ -377,6 +380,7 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
     return TextFormField(
       keyboardType: TextInputType.text,
       decoration: const InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         labelText: '',
         hintText: 'Enter designation',
         // icon: const Padding(
@@ -423,6 +427,7 @@ class _YourInfoState extends State<YourInfo> with InputValidator {
     return TextFormField(
       keyboardType: TextInputType.text,
       decoration: const InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         labelText: '',
         hintText: 'Enter your domain',
         // icon: const Padding(

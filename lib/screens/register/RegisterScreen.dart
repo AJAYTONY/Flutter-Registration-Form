@@ -226,6 +226,7 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
         TextFormField(
           obscureText: isObscure,
           decoration: InputDecoration(
+            floatingLabelBehavior: FloatingLabelBehavior.always,
             hintText: 'password',
             labelText: '',
             // icon: const Padding(
@@ -295,6 +296,7 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
         TextFormField(
           obscureText: isObscure,
           decoration: InputDecoration(
+            floatingLabelBehavior: FloatingLabelBehavior.always,
             labelText: '',
             hintText: 'password',
             // icon: const Padding(
@@ -332,7 +334,7 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
               return "Please Enter confirm Password";
             } else {
               if (val != passwordController.text) {
-                return "Not match";
+                return "Password Not match ";
               }
             }
             return null;
@@ -378,6 +380,7 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
       obscureText: isObscure,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
         hintText: 'Your email goes here',
         hintStyle: TextStyle(color: Colors.grey[400]!),
         labelText: '',
