@@ -1,0 +1,1 @@
+enum States{maharashtra, gujarat, karnataka, madhyaPradesh, delhi, others}
