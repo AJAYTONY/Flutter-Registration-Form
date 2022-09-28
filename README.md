@@ -1,16 +1,30 @@
-# neo_registration_page
+# Registeration Form
 
-A new Flutter project.
+A Flutter Registeration Form with Validation and used by ImagePicker, TextFormField, DropDown, Password hide/show etc
 
 ## Getting Started
+For help getting started with Flutter, view our online [documentation](https://flutter.dev/):
 
-This project is a starting point for a Flutter application.
+## How to Download Flutter Form Project in your Android Studio
 
-A few resources to get you started if this is your first Flutter project:
+Run this both command in your project folder terminal
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+   ```sh
+flutter pub get 
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ ```sh
+flutter pub run 
+```
+
+## ScreenShot
+waiting
+
+
+## Contribute
+Don't hesitate to open issues and make a pull request to help improve code
+
+
+
+## Support
+Don't forget to follow the project's author, Ezz, and consider starring the project to show your ❤️ and support.
