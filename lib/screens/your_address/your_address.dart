@@ -105,7 +105,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             RegisterTextField(
               labelText: "",
               hintText: "Address",
-              leadingIcon: Icons.house,
+              leadingIcon: Icons.location_city,
               controller: addressController,
               textInputType: TextInputType.text,
               validator: validateAddress,
@@ -115,7 +115,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             RegisterTextField(
               labelText: "",
               hintText: "Landmark",
-              leadingIcon: Icons.house,
+              leadingIcon: Icons.location_city,
               controller: landmarkController,
               textInputType: TextInputType.text,
               validator: validateLandmark,
@@ -125,7 +125,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             RegisterTextField(
               labelText: "",
               hintText: "City",
-              leadingIcon: Icons.house,
+              leadingIcon: Icons.location_city,
               controller: cityController,
               textInputType: TextInputType.text,
               //validator: validateFirstName,
@@ -138,7 +138,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             RegisterTextField(
               labelText: "",
               hintText: "Pin Code",
-              leadingIcon: Icons.house,
+              leadingIcon: Icons.location_city,
               controller: zipcodeController,
               textInputType: TextInputType.number,
               validator: validatePinCode,
