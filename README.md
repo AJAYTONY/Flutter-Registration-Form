@@ -1,6 +1,6 @@
 # Registeration Form
 
-A Flutter Registeration Form with Validation and used by ImagePicker, TextFormField, DropDown, Password hide/show etc
+A Flutter Registeration Form with Validation and used by ImagePicker, TextFormField, DropDown, Password hide/show with match confirm password etc
 
 ## Getting Started
 For help getting started with Flutter, view our online [documentation](https://flutter.dev/):
