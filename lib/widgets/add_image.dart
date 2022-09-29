@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:image_picker/image_picker.dart';
 
 class AddImageForm extends StatelessWidget {
@@ -15,41 +16,48 @@ class AddImageForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget _placeholder = Stack(children: [
-      Container(
-        margin: EdgeInsets.only(top: 48),
-        // height: 300,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16.0),
-        ),
+    Widget _placeholder = Stack(children: <Widget>[
+      Padding(
+        padding: const EdgeInsets.only(top: 18.0, left: 168.0),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
+                width: 28.0,
+                height: 28.0,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  shape: BoxShape.circle,
+                  image: const DecorationImage(
+                      //fit: BoxFit.fill,
+                      image: AssetImage('assets/images/pencil2.png')),
+                ),
+              )
+            ]),
       ),
-      const Align(
-        alignment: Alignment.center,
-        child: SizedBox(
-          child: CircleAvatar(
-            radius: 40.0,
-            backgroundColor: Colors.blue,
-            child: CircleAvatar(
-              radius: 38.0,
-              backgroundImage:
-                  AssetImage('default.user.png'),
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: CircleAvatar(
-                  backgroundColor: Colors.white,
-                  radius: 12.0,
-                  child: Icon(
-                    Icons.camera_alt,
-                    size: 15.0,
-                    color: Color(0xFF404040),
-                  ),
+      Center(
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                margin: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
+                width: 68.0,
+                height: 68.0,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  shape: BoxShape.circle,
+                  image: const DecorationImage(
+                      fit: BoxFit.fitHeight,
+                      image: AssetImage('assets/images/default_user.png')),
                 ),
               ),
-            ),
-          ),
-        ),
-      )
+            ]),
+      ),
     ]);
 
     return Column(
@@ -62,9 +70,9 @@ class AddImageForm extends StatelessWidget {
                 : _ImageWidget(
                     image: imagePath,
                   )),
-        SizedBox(
-          height: 5,
-        ),
+        // const SizedBox(
+        //   height: 5,
+        // ),
         // Text('Add Profile Image'),
       ],
     );
@@ -77,24 +85,46 @@ class AddImageForm extends StatelessWidget {
       builder: (context) => Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
-            height: 20,
+          const SizedBox(
+            height: 16,
           ),
+          Text(
+            'Add Profile Picture',
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
+                color: Colors.grey.shade500),
+          ),
+          // const SizedBox(
+          //   height: 16,
+          // ),
+          Divider(),
           SizedBox(
-            height: 40,
+            //height: 40,
             child: GestureDetector(
               onTap: () => _showCamera(context),
-              child: Text('Add from Camera'),
+              child: Text(
+                'Take a Picture',
+                style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 16,
+                    color: Colors.blue.shade500),
+              ),
             ),
           ),
+          Divider(),
           SizedBox(
-            height: 40,
+            // height: 40,
             child: GestureDetector(
               onTap: () => _showGallery(context),
-              child: Text('Add from Gallery'),
+              child: Text('Choose from Gallery',
+                  style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 16,
+                      color: Colors.blue.shade500)),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           )
         ],

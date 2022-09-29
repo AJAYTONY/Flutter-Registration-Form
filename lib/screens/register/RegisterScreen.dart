@@ -114,6 +114,10 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
           alignment: Alignment.center,
           child: AddImageForm(),
         ),
+        // Align(
+        //   alignment: Alignment.center,
+        //   child: AddImageForm2(context),
+        // ),
         const WidgetHeader(text: 'First Name *'),
         const SizedBox(
           height: 4,
@@ -364,7 +368,6 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
   }
 
   void onRegisterTap() {
-
     if (formGlobalKey.currentState?.validate() ?? false) {
       formGlobalKey.currentState!.save();
 
@@ -377,7 +380,6 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
 
   TextFormField _Email(BuildContext context) {
     return TextFormField(
-      obscureText: isObscure,
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -429,6 +431,25 @@ class _RegisterScreenState extends State<RegisterScreen> with InputValidator {
         }
       },
       // onSaved: (val) => _password = val,
+    );
+  }
+
+  Widget AddImageForm2(BuildContext context) {
+    return  Container(
+      width: 70.0,
+      height: 70.0,
+      decoration: BoxDecoration(
+        color: const Color(0xff7c94b6),
+        image: DecorationImage(
+          image: NetworkImage('https://lh3.googleusercontent.com/ogw/AOh-ky3dsfhT8NtSUWFLRZnyOe3Cf4dn80KuUIZd-FufoQ=s32-c-mo'),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.all( Radius.circular(50.0)),
+        border: Border.all(
+          color: Colors.black87,
+          width: 1.0,
+        ),
+      ),
     );
   }
 }

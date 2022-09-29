@@ -136,7 +136,7 @@ class _YourAddressState extends State<YourAddress> with InputValidator {
             SizedBox(height: 20,),
 
             RegisterTextField(
-              labelText: " ",
+              labelText: "",
               hintText: "Pin Code",
               leadingIcon: Icons.house,
               controller: zipcodeController,
